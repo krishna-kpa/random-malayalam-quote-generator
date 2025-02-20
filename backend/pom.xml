@@ -7,8 +7,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.4.2</version>
-        <relativePath/> <!-- Lookup parent from repository -->
+        <version>3.2.2</version>
+        <relativePath/>
     </parent>
 
     <groupId>com.kp</groupId>
@@ -30,7 +30,7 @@
         <developer>
             <id>krishnaprasad-a</id>
             <name>Krishna Prasad A</name>
-            <email>krishnaprasad@example.com</email> <!-- Update with your actual email -->
+            <email>krishnaprasad@example.com</email>
         </developer>
     </developers>
 
@@ -46,6 +46,23 @@
     </properties>
 
     <dependencies>
+        <!-- ✅ Spring Cloud OpenFeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
+        <!-- ✅ Resilience4J Circuit Breaker -->
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-spring-boot3</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>io.github.resilience4j</groupId>
+            <artifactId>resilience4j-circuitbreaker</artifactId>
+        </dependency>
+
         <!-- Swagger for API Documentation -->
         <dependency>
             <groupId>io.swagger.core.v3</groupId>
@@ -81,7 +98,39 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+
+        <dependency>
+            <groupId>org.springframework.retry</groupId>
+            <artifactId>spring-retry</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
+        </dependency>
+
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- ✅ Use correct Spring Cloud Release Train -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>2023.0.1</version> <!-- ⚡ Compatible with Spring Boot 3.2.x -->
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>io.github.resilience4j</groupId>
+                <artifactId>resilience4j-bom</artifactId>
+                <version>2.2.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
@@ -127,7 +176,7 @@
                             </descriptorRefs>
                             <archive>
                                 <manifest>
-                                    <mainClass>com.kp.MainApplication</mainClass> <!-- Update main class -->
+                                    <mainClass>com.kp.MainApplication</mainClass>
                                 </manifest>
                             </archive>
                         </configuration>
@@ -136,4 +185,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

@@ -1,6 +1,7 @@
 package com.kp.random_malayalam_quote_generator.dto;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -15,8 +16,8 @@ import static com.kp.random_malayalam_quote_generator.constant.RandomQuoteGenera
  * @since 20-02-2025
  */
 @Getter
-@Setter
 @ToString
+@AllArgsConstructor
 public class QuoteResponseDTO {
 
     @JsonProperty(QUOTE)

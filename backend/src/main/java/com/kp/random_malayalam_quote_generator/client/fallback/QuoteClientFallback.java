@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 import com.kp.random_malayalam_quote_generator.client.QuoteClient;
 import com.kp.random_malayalam_quote_generator.dto.AdviceDTO;
 import com.kp.random_malayalam_quote_generator.dto.SlipDTO;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestHeader;
 
@@ -24,7 +25,7 @@ public class QuoteClientFallback implements QuoteClient {
      * @return QuoteResponseDTO
      */
     @Override
-    public JsonNode getRandomQuote(@RequestHeader("Accept") String accept) {
+    public ResponseEntity<String> getRandomQuote(@RequestHeader("Accept") String accept) {
         AdviceDTO adviceDTO = new AdviceDTO(-1, SERVICE_UNAVAILABLE);
         SlipDTO quoteResponse = new SlipDTO(adviceDTO);
         return null;

@@ -2,6 +2,7 @@ package com.kp.random_malayalam_quote_generator.client;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestHeader;
 
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface QuoteClient {
 
     @GetMapping(value = "/advice", produces = "application/json")
-    JsonNode getRandomQuote(@RequestHeader("Accept") String accept);
+    ResponseEntity<String> getRandomQuote(@RequestHeader("Accept") String accept);
 }
 
 

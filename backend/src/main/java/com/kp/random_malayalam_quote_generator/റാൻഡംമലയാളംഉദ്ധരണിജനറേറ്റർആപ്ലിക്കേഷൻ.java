@@ -5,17 +5,17 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
- * Main class
+ * പ്രധാന ക്ലാസ്
  *
  * @author Krishna Prasad A
  * @since 20-02-2025
  */
 @SpringBootApplication
 @EnableFeignClients
-public class RandomMalayalamQuoteGeneratorApplication {
+public class റാൻഡംമലയാളംഉദ്ധരണിജനറേറ്റർആപ്ലിക്കേഷൻ {
 
     public static void main(String[] args) {
-        SpringApplication.run(RandomMalayalamQuoteGeneratorApplication.class, args);
+        SpringApplication.run(റാൻഡംമലയാളംഉദ്ധരണിജനറേറ്റർആപ്ലിക്കേഷൻ.class, args);
     }
 
 }

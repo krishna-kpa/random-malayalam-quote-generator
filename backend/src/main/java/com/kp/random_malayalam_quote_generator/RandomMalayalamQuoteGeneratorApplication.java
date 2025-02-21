@@ -12,10 +12,10 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
  */
 @SpringBootApplication
 @EnableFeignClients
-public class റാൻഡംമലയാളംഉദ്ധരണിജനറേറ്റർആപ്ലിക്കേഷൻ {
+public class RandomMalayalamQuoteGeneratorApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(റാൻഡംമലയാളംഉദ്ധരണിജനറേറ്റർആപ്ലിക്കേഷൻ.class, args);
+        SpringApplication.run(RandomMalayalamQuoteGeneratorApplication.class, args);
     }
 
 }

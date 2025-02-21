@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class റാൻഡംമലയാളംഉദ്ധരണിജനറേറ്റർആപ്ലിക്കേഷൻTests {
+class RandomMalayalamQuoteGeneratorApplicationTests {
 
 	@Test
 	void contextLoads() {

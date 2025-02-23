@@ -5,8 +5,8 @@ import com.kp.random_malayalam_quote_generator.dto.QuoteResponseDTO;
 import com.kp.random_malayalam_quote_generator.service.QuoteGeneratorService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.coyote.Response;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -22,6 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api/v1/quote")
 @Slf4j
+@CrossOrigin(origins = "http://localhost:3000")
 public class RandomQuoteGeneratorControllerImpl implements RandomQuoteGeneratorController {
 
     private final QuoteGeneratorService quoteGeneratorService;
